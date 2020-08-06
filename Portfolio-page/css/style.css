@@ -1,0 +1,115 @@
+/* 
+    dark-grey: #292929
+    pink: #ec606d
+    light-purple: #8b78c3
+    dark-purple: #8b78c3
+    green-color: #8b78c3
+*/
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: roboto, sans-serif;
+    position: relative;
+}
+
+.nav{
+    background:#fff;
+    margin: 0;
+    padding: 2px 10px;
+    display:flex ;
+    justify-content: flex-end;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+
+}
+.nav-list{
+    list-style: none;
+}
+.nav-item{
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+}
+.nav-link{
+    text-decoration: none;
+    color: rgb(53, 53, 53);
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: .4s all;
+}
+.nav-link:hover{
+    background:#ec606d;
+    color: #fff;
+
+}
+.header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(139, 120, 195, 0.822), rgba(17, 7, 151, 0.986)),url('../img/hero-img.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.header-hero{
+    text-align: center;
+    color: #fff;
+    animation-name: fade-out;
+    animation-duration: 1.5s ;
+    /* animation-delay: 2s; */
+    /* animation-iteration-count: infinite; */
+    animation-timing-function: ease-in;
+    transform-origin: left;
+}
+.header-hero-heading{
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+.header-hero-text{
+    margin-top: none;
+    letter-spacing: 2px;
+
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    animation: move-right .5s ease-out 1s infinite ;
+    background: red;
+
+}
+
+
+
+/* Animations */
+@keyframes fade-out{
+
+    0%{
+        opacity:0;
+        transform: scale(0);
+    }
+
+    70%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity:1;
+        transform: scale(1);
+    }
+
+}
+
+
+
