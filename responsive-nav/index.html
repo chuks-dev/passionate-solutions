@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive navigation</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav-logo">Edison Kelvin</div>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Business area</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+      </div>
+    </nav>
+
+    <nav class="mobile-nav">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a href="#" class="mobile-nav-link">
+            Home
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="#" class="mobile-nav-link">
+            About
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="#" class="mobile-nav-link">
+            Service
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a href="#" class="mobile-nav-link">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <script>
+      document.querySelector(".hamburger").addEventListener("click", (e) => {
+        document
+          .querySelector(".mobile-nav")
+          .classList.toggle("show-mobile-nav");
+      });
+    </script>
+  </body>
+</html>

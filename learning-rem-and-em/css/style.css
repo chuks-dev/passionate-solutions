@@ -1,0 +1,127 @@
+:root{
+    --Primary-color:#16697A;
+    --Primary-accent-light:#82C0CC;
+    --Primary-accent-dark:#EDE7E3;
+    --Secondary-color: #ff9c2b;
+    --light-grey:#EDE7E3;
+}
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    background: ;
+}
+
+.nav{
+    background: var(--Secondary-color);
+
+}
+.nav-logo{
+
+}
+
+.nav-list{
+
+}
+.nav-item{
+
+}
+.nav-link{
+    color: var(--Primary-accent-light);
+}
+.header{
+
+}
+.header-heading{
+
+}
+.main{
+
+}
+.about{
+
+}
+.about-details{
+
+}
+.about-details-heading{
+    color: var(--Secondary-color);
+}
+.about-details-text{
+
+}
+.about-box{
+
+}
+.about-box-heading{
+    color: var(--Secondary-color);
+}
+.about-box-text{
+
+}
+.footer{
+
+}
+.footer-text{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tablet Land = 1200px /16 = 75em*/
+@media(max-width:75em){
+    html{
+        font: 56.26%;
+    }
+}
+
+/* Tablet portrait = 900px /16 = 56.25em*/
+@media(max-width: 56.25em){
+    html{font-size: 50%;}
+}
+
+
+/* Phone  = 600px / 16 = 37.5em*/
+@media (max-width: 37.5em){
+    html{
+        font-size: 35.7%;
+    }
+}
