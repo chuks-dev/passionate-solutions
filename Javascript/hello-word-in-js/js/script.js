@@ -46,20 +46,16 @@ Objects ={name:"Kelvin", age: 43, isTall: true}
 // var btn = document.getElementsByClassName('btn');
 // console.log(btn);
 
-
-
 // var heading = document.querySelector('h1');
 // console.log(heading);
 
-
-var firstName = document.querySelector('#firstName');
+var firstName = document.querySelector("#firstName");
 console.log(firstName);
 
-var btn = document.querySelector('.btn');
+var btn = document.querySelector(".btn");
 console.log(btn);
 
-btn.addEventListener('click', outputFirstName)
-
+btn.addEventListener("click", outputFirstName);
 
 // ! Operators in Javascript
 /*
@@ -87,7 +83,6 @@ multiply: *
 
 */
 
-
 var firstNumber = 70;
 var secondNumber = 20;
 var thirdNumber = 3;
@@ -109,15 +104,14 @@ var isValid = false;
 
 console.log(firstNumber === fifthNumber && secondNumber === fourthNumber);
 
-console.log(firstNumber === sixthNumber || secondNumber === thirdNumber)
+console.log(firstNumber === sixthNumber || secondNumber === thirdNumber);
 
-console.log(!isValid)
-console.log(firstNumber > secondNumber)
-console.log(firstNumber < secondNumber)
-console.log(firstNumber > fifthNumber)
-console.log(firstNumber >= fifthNumber)
-console.log(firstNumber <= fifthNumber)
-
+console.log(!isValid);
+console.log(firstNumber > secondNumber);
+console.log(firstNumber < secondNumber);
+console.log(firstNumber > fifthNumber);
+console.log(firstNumber >= fifthNumber);
+console.log(firstNumber <= fifthNumber);
 
 // ! Conditional Statements
 // if(firstNumber > fifthNumber){
@@ -126,21 +120,15 @@ console.log(firstNumber <= fifthNumber)
 //   console.log('Fifth number is greater')
 // }
 
-
-
-
-if(firstNumber > fifthNumber){
-  console.log('First Number is greater')
-}
-else if (firstNumber === fifthNumber){
+if (firstNumber > fifthNumber) {
+  console.log("First Number is greater");
+} else if (firstNumber === fifthNumber) {
   console.log("The first Number is equal to fifth Number");
-}
-else{
-  console.log('Fifth number is greater than first number')
+} else {
+  console.log("Fifth number is greater than first number");
 }
 
-
-//! Function 
+//! Function
 // TYpes of functions
 /*
 Types of functions 
@@ -149,22 +137,53 @@ Types of functions
 
 */
 
+addNumbers(6, 7);
+addNumbers(firstNumber, secondNumber);
+multiplyNumbers(3, 3, 3);
 
-
-addNumbers(6,7)
-addNumbers(firstNumber,secondNumber)
-multiplyNumbers(3,3,3)
-
-
-
-
-
-function addNumbers(a,b){
-  console.log(a+b);
+function addNumbers(a, b) {
+  console.log(a + b);
 }
-function multiplyNumbers(a,b,c){
-  console.log(a*b*c);
+function multiplyNumbers(a, b, c) {
+  console.log(a * b * c);
 }
-function outputFirstName(){
-  console.log(firstName.value)
+function outputFirstName() {
+  console.log(firstName.value);
 }
+
+function sq(x) {
+  console.log(x * x);
+}
+
+function checkEvenNumber(num) {
+  if (num % 2 === 0) {
+    console.log(num + " is an even number");
+  } else {
+    console.log(num + " is an odd number");
+  }
+}
+
+checkEvenNumber(1);
+
+// Loops
+
+// for (var i = 1; i <= 10; i++) {
+//   console.log(i);
+// }
+
+var i = 0;
+
+while (i < 10) {
+  console.log(i);
+  i++;
+}
+
+
+// Method
+// Maths method
+var kelvinNumber= 40.447;
+var edisonNumber = 64;
+console.log(Math.round(kelvinNumber));
+console.log(Math.floor(kelvinNumber));
+console.log(Math.sqrt(edisonNumber));
+
