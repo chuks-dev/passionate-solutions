@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo list app</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container app">
+      <div class="app-header">
+        <h1 class="app-header-title">My Todos</h1>
+        <form action="#" class="app-header-form">
+          <div class="app-header-form-field">
+            <input
+              type="text"
+              class="app-header-form-input"
+              placeholder="Click to add New Todo"
+            />
+            <pre class="app-header-form-error">Item can't be empty</pre>
+          </div>
+          <button class="app-header-form-btn">
+            <i class="fa fa-plus app-header-form-btn-icon"></i>
+          </button>
+        </form>
+      </div>
+      <ul class="app-list">
+        <li class="app-item">
+          <div class="app-item-checkbox">
+            <i class="fa fa-check app-item-checkbox-icon"></i>
+          </div>
+          <p class="app-item-name">
+            Go to the gym
+          </p>
+          <i class="fa fa-trash-alt app-item-delete"></i>
+        </li>
+        <li class="app-item">
+          <div class="app-item-checkbox checked">
+            <i class="fa fa-check app-item-checkbox-icon"></i>
+          </div>
+          <p class="app-item-name">
+            Go to the gym
+          </p>
+          <i class="fa fa-trash-alt app-item-delete"></i>
+        </li>
+        <li class="app-item">
+          <div class="app-item-checkbox">
+            <i class="fa fa-check app-item-checkbox-icon"></i>
+          </div>
+          <p class="app-item-name">
+            Go to the gym
+          </p>
+          <i class="fa fa-trash-alt app-item-delete"></i>
+        </li>
+      </ul>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
