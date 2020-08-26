@@ -45,11 +45,15 @@ body {
   text-transform: uppercase;
 }
 .app-header-form {
+  max-width: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px 30px;
 }
 .app-header-form-field {
   margin-right: 20px;
+  width: 80%;
 }
 .app-header-form-input {
   height: 50px;
@@ -60,6 +64,7 @@ body {
   color: var(--color-white);
   font-family: Roboto, sans-serif;
   font-size: 20px;
+  width: 100%;
 }
 
 .app-header-form-input:focus {
@@ -80,6 +85,9 @@ body {
 }
 .app-header-form-error {
   color: rgb(255, 123, 123);
+  width: 100%;
+  overflow: hidden;
+  white-space: pre-line;
 }
 .app-header-form-btn {
   width: 50px;
@@ -89,6 +97,7 @@ body {
   background: var(--color-white);
   cursor: pointer;
   transition: all 0.2s;
+  outline: none;
 }
 .app-header-form-btn:hover {
   transform: scale(1.1);
@@ -117,6 +126,7 @@ body {
   align-items: center;
   cursor: pointer;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .app-item:hover {
@@ -149,9 +159,7 @@ body {
   border: none;
 }
 
-.app-item-checkbox.checked {
-  background: var(--color-primary);
-}
+
 
 .app-item-checkbox:hover {
   box-shadow: 0 3px 6px rgba(10, 1, 32, 0.466);
@@ -175,6 +183,9 @@ body {
 }
 .app-item-name {
   text-align: center;
+  width: 80%;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 .app-item-checkbox.checked + .app-item-name {
   text-decoration: line-through;
