@@ -3,7 +3,12 @@
 <h2 class="display-2 text-center">Create a new post</h2>
 
 <main>
-  <form class="my-5 mx-auto" style="width: 60%">
+  <form
+    action="/create-post"
+    method="POST"
+    class="my-5 mx-auto"
+    style="width: 60%"
+  >
     <div class="mb-3">
       <label for="title" class="form-label">Give your post a title</label>
       <input name="title" type="text" class="form-control" id="title" />

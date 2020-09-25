@@ -1,4 +1,7 @@
 <%-include ('./partials/header') %>
+<% const featuredPosts = posts.filter(post=>post.featured) %> 
+
+
 
 <header>
   <div
@@ -7,53 +10,29 @@
     data-ride="carousel"
   >
     <ol class="carousel-indicators">
-      <li
-        data-target="#carouselExampleIndicators"
-        data-slide-to="0"
-        class="active"
-      ></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+   <%   featuredPosts.reverse().forEach((post, index) =>{ %>
+     <li class="item-indicator" data-target="#carouselExampleIndicators" data-slide-to=<%=index%>></li>
+    <%  }) %>
+  
     </ol>
     <div class="carousel-inner">
-      <div class="carousel-item active">
+      <% featuredPosts.forEach(post =>{ %>
+        <div class="carousel-item ">
         <img
-          src="/img/img-1.jpg"
+          src=<%=post.imgUrl  %>
           class="d-block w-100 carousel-img"
           alt="..."
         />
         <div class="carousel-caption d-none d-md-block">
-          <h5>The Freelance Developer</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h5><%=post.title  %> </h5>
+          <p><%=post.content.substring(0,50)  %> </p>
           <a class="btn-sm btn-outline-secondary" href="/about"> Read More</a>
         </div>
       </div>
-      <div class="carousel-item">
-        <img
-          src="/img/img-2.jpg"
-          class="d-block h-50 w-100 carousel-img"
-          height="100%"
-          alt="..."
-        />
-        <div class="carousel-caption d-none d-md-block">
-          <h5>The Coder vs Developer</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          <a class="btn-sm btn-outline-secondary" href="/about"> Read More</a>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img
-          src="/img/img-3.jpg"
-          class="d-block h-50 w-100 carousel-img"
-          height="100%"
-          alt="..."
-        />
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Why Marry a tech Girl</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          <a class="btn-sm btn-outline-secondary" href="/about"> Read More</a>
-        </div>
-      </div>
+
+      <% }) %> 
+
+      
     </div>
     <a
       class="carousel-control-prev"
@@ -79,48 +58,31 @@
 <main class="mt-5">
   <div class="container">
     <div class="row">
-      <div class="col-md-4 mb-5">
+      
+      <% posts.reverse().forEach((post)=>{ %>
+        <div class="col-md-4 mb-5">
         <div class="card" style="">
-          <img src="/img/img-1.jpg" class="card-img-top" alt="..." />
+          <img src=<%=post.imgUrl  %>  class="card-img-top" alt=<%=post.title%> />
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title"><%= post.title  %> </h5>
             <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              
+              <%=post.content.substring(0,100)  %>...
             </p>
             <a href="/post" class="btn btn-primary">Read more</a>
           </div>
         </div>
       </div>
 
-      <div class="col-md-4 mb-5">
-        <div class="card" style="">
-          <img src="/img/img-2.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="/post" class="btn btn-primary">Read more</a>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-md-4 mb-5">
-        <div class="card" style="">
-          <img src="/img/img-1.jpg" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="/post" class="btn btn-primary">Read more</a>
-          </div>
-        </div>
-      </div>
-    </div>
+     <% }) %> 
+
+
+
+
+
+
+      
 
     <div class="row">
       <div class="card my-5 text-center p-0">
